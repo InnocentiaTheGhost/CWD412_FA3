@@ -1,0 +1,68 @@
+/* The heading */
+h3{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    margin-left: 90px;
+}
+
+.reg-form{
+    background-color: white;
+    margin: 10px 190px 10px 190px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    
+}
+
+.container{
+    background-color: rgba(9, 9, 61, 0.904);
+    padding: 20px;
+    border-width: 100px;
+    position:absolute;
+    
+}
+
+input{
+    margin-left: -1px;
+    width: 240px;
+}
+
+#fname{
+    margin-left: -180px;
+}
+
+
+#lname{
+    margin-left: -180px;
+}
+
+#email{
+    margin-left: -210px;
+}
+
+#pass{
+    margin-left: -190px;
+}
+
+#confirm{
+    margin-left: -130px;
+}
+
+#submit-btn{
+    margin-left: -1px;
+    background-color: lightseagreen;
+    color: white;
+    width: 250px;
+}
+
+p{
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+

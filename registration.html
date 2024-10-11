@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="shortcut icon" href="WhatsApp Image 2024-08-26 at 10.30.53_3a534b27.jpg" type="image/x-icon">    
+</head>
+<body>
+    
+     <div class="container">
+
+    <form action="login.html" class="reg-form">
+        
+
+        <h3>Register</h3>
+        <p>It's free and only takes a minute</p>
+
+        <label for="fname" id="fname">First Name</label>
+        <br>
+        <input type="text">
+        <br>
+        <br>
+
+        <label for="lname" id="lname">Last Name</label><br>
+        <input type="text" required><br><br>
+
+        <label for="email" id="email">Email</label><br>
+        <input type="text" required><br><br>
+
+        <label for="password" id="pass">Password</label><br>
+        <input type="password" required><br><br>
+    
+        <label for="confirmation" id="confirm">Confirm Password</label><br>
+        <input type="password" required><br>
+        <br>
+
+        <button onclick="register()" id="submit-btn"  href="registration.css" action="registration.css">Submit</button>
+    </form>
+
+    </div>
+
+    <script>
+        function register(){
+            document.getElementById("submit-btn").innerHTML.link("registration.css");
+        }
+    </script>
+</body>
+</html>

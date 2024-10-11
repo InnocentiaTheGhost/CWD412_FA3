@@ -1,0 +1,59 @@
+
+
+body{
+    font-family: sans-serif;
+    /* background-color: rgb(172, 59, 185); */
+    margin: 0;
+    background-image:url('https://media.istockphoto.com/id/1252593916/photo/school-supplies-on-blue-background.jpg?s=612x612&w=0&k=20&c=UaSf3atg2K8VYXxey6isZ0OKKspd3zvARkLAe5zIuSw=');
+    display: flex;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container > h1{
+    outline-width: 8px;
+    outline-color: rgb(53, 99, 198);
+    background-color: rgb(32, 95, 173);
+    border-bottom:5px solid blue;
+    text-align: center;
+    border-top: 5px solid blue;
+    font-family: "Grey Qo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    opacity: 100%;
+    margin: 12%;
+    background-color: rgb(52, 194, 255);
+    text-align: center;
+    padding: 20px;
+    align-content: center;
+
+}
+#lbluser,#lblpass{
+    padding-right:102px ;
+}
+
+button{
+    margin-top: 15px;
+    width: 70px;
+    color: white;
+    background-color: blue;
+    padding: 10px 10px;
+    border-radius: 4px;
+    /* font-weight: 1;  */
+    font-size: large;
+    cursor: pointer;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+}
+
+    button:hover{
+        background-color: pink;
+        color: blue;
+    }
+
+

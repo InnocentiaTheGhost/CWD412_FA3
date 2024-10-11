@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion page</title>
+    <link rel="shortcut icon" href="WhatsApp Image 2024-08-26 at 10.30.53_3a534b27.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+
+<body style="background-image: url('https://media.istockphoto.com/id/1650555018/photo/business-people-meeting-and-corporate-discussion-against-a-blurred-background-at-the-office.webp?b=1&s=612x612&w=0&k=20&c=2LG8ot14cmmen8M9GC5gjTG0A5S6ZdHKS_T9GMZe30w=');background-size: cover;">  
+      <header>
+        <nav>
+            <a href="main page.html">Home</a>
+            <a href="timetable.html">Timetable</a>
+            <a href="discussion.html">Discussion</a>
+            <a href="Share Resourses.html">Share Reasources</a>
+            <a href="about us.html">About us</a>
+            <a href="Contact us.html">Contact us</a>
+        </nav>
+        
+        <h1>Discussion page</h1>
+
+    </header>
+    <div class="discussion-container">
+
+        <h1>Ask a Question</h1>
+        <form action="questions.php" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+            <label for="question">Question:</label><br>
+            <textarea id="question" name="question" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="questions" id="questions-list">
+            <!-- Questions will be dynamically inserted here -->
+        </div>
+    
+ 
+
+   
+    <h1>Leave a comment</h1>
+    <form action="comment.php" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+
+
+
+<div class="comment" id="questions-list">
+<!-- Questions will be dynamically inserted here -->
+</div>
+</div>
+<!-- Moderation Panel -->
+<div class="moderation-panel">
+
+<!-- User Management -->
+<h2>Moderation Tool🔎</h2>
+<section class="management-section">
+<h2>User Management</h2>
+<button class="moderation-button" id="allow-user">Allow</button>
+<button class="moderation-button" id="deny-user">Deny</button>
+<button class="moderation-button" id="delete-user">Delete</button>
+</section>
+
+<!-- Discussion Management -->
+<section class="management-section">
+<h2>Discussion Management</h2>
+<button class="moderation-button" id="block-discussion">Block</button>
+<button class="moderation-button" id="unblock-discussion">Unblock</button>
+<button class="moderation-button" id="delete-discussion">Delete</button>
+</section>
+</div>
+</div>
+</section>
+
+<section id="user-profile">
+<h2>My Profile</h2>
+<p>Username: <span class="username">Triple A's Majesty</span></p>
+<p>Joined: <span class="date">2024-08-19</span></p>
+<p>Threads: <span class="thread-count">5</span></p>
+<p>Replies: <span class="reply-count">10</span></p>
+</section>
+<footer>
+    &copy; 2024 City Technical University. All Rights Reserved.
+</footer> 
+<script>
+    document.getElementById('discussion-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const question = document.getElementById('question').value;
+
+        const questionItem = document.createElement('div');
+        questionItem.classList.add('question');
+
+        questionItem.innerHTML = `
+            <strong>${name}</strong>: ${question}
+            <div class="response-form">
+                <textarea placeholder="Write your response..." rows="2"></textarea>
+                <button onclick="postResponse(this)">Respond</button>
+            </div>
+            <div class="responses"></div>
+        `;
+
+        document.getElementById('questions-list').prepend(questionItem);
+        document.getElementById('discussion-form').reset();
+    });
+
+    function postResponse(button) {
+        const responseText = button.previousElementSibling.value;
+        const responsesDiv = button.parentElement.nextElementSibling;
+
+        if (responseText.trim() !== "") {
+            const responseItem = document.createElement('div');
+            responseItem.classList.add('response');
+            responseItem.innerHTML = <strong>Response:</strong> &{responseText};
+            responsesDiv.appendChild(responseItem);
+            button.previousElementSibling.value = ""; // Clear the textarea
+        }
+    }
+</script>
+</body>
+</html>
